@@ -10,13 +10,13 @@ state = {
 @app.route("/summarize/", methods=["GET"])
 def set_summarize():
     """Increments the state value by 1 and returns the updated state."""
-    state['summarize'] = +1
+    state['summarize'] += 1
     return jsonify(state)
 
 @app.route("/obsidian-email/", methods=["GET"])
 def set_obsidian_email():
     """Increments the state value by 1 and returns the updated state."""
-    state['obsidian-email'] = +1
+    state['obsidian-email'] += 1
     return jsonify(state)
 
 @app.route("/get/", methods=["GET"])
